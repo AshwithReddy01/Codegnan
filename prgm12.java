@@ -1,4 +1,4 @@
-import java.util.*;
+
 public class prgm12 {
     public static void main(String[] args) {
         int MyArray[][] = new int[3][];
