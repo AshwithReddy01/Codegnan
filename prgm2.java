@@ -12,5 +12,6 @@ public class prgm2 {
 
         System.out.println(x==y);
         System.out.println(x!=y);
+        sc.close();
     }
 }

@@ -7,8 +7,8 @@ public class course1 {
         courseref.courseId=100;
         courseref.courseName ="Java";
         courseref.courseDuration = 100;
-
         courseref.display();
+        
         course1 courseref1 =new course1();
         courseref1.courseId = 101;
         courseref1.courseName="Python";

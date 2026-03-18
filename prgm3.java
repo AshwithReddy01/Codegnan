@@ -10,5 +10,6 @@ public class prgm3 {
         else if(A<18 || A>=100){
             System.out.println("Invalid Age");
         }
+        sc.close();
     }
 }

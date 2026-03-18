@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 public class prgm6 {
     public static void main(String[] args) {
         int i=1;

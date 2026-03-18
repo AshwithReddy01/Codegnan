@@ -21,7 +21,7 @@ public class prgm4 {
         }
         else{
             System.out.println("Fail");
+        }  sc.close();
         }
-    }
     
 }
