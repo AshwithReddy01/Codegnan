@@ -1,0 +1,329 @@
+Naming conventions :
+====================
+Rules: Must start with a letter or $ OR _
+       Cannot start with a digit
+       Cannot use java keyword     //wrong - int static =20;
+       Case sensitive (int age = 20; int Age=23;)
+       No spaces allowed (int myage = 10; int my age =10;)
+       Can contain digits(in between or end), letters, $, _   
+       
+Conventions:
+camelCase : eg. age, ageDetails, studentAge
+
+Follow UPPER snake case for constants
+       eg. STUDENT_AGE
+
+Follow Pascal for classnames
+       eg. Employees
+
+Follow lowercase for Packages:
+package com.codegyan
+
+
+
+Operators: Operators are the symbols that perform operations on the operands.
+
+1. Arithematic operators
+   +  addition eg. 10+5
+   -  substraction eg. 10-5
+   *  multiplication eg. 10*5
+   /  division  eg. 10/5 = 2 quotient
+   %  modulus   eg. 10/5 = 0 remainder
+
+Unary operators:
+++ increment operator:
+                      a++ - post increment operator, ++a - pre increment operator
+-- decrement operator:
+                      a-- - post decrement operator, --a - pre decrement operator
+
+
+Typecasting is the process of converting one primitive data type into another primitive data type
+
+There are two types:
+1. widening or implicit or automatic conversion
+small data type to large data type automatically done by JVM
+
+Example:
+
+float a = 24.4f; // 4 bytes
+double b = a; // 8 bytes
+
+byte --> short --> int --> long --> float --> double
+
+2.narrowing or explicit 
+large data type into small data type 
+data loss might occur
+double to int decimal values are lost
+
+Example:
+datatype1 a = (datatype2) value; 
+
+--------------------------------
+Package:
+
+java.util:
+---------
+java.util.Scanner;
+java.util.ArrayList;
+java.util.HashMap;
+java.util.Date;
+java.util.Math
+
+
+java.util.package:
+-----------------
+java.lang.System;
+java.lang.String;
+java.lang.Integer;
+
+
+Predefined packages - available in java
+
+User-defined packages 
+- boa.com -reverse - com.boa.banking
+-codegnan.com - com.codegnan.sms
+
+hibernate.org -org.hybernate
+springframework.org - org.springframework
+
+package:
+Packages in java help us to organize classes into folders(directories).
+Package is a namespace that groups relates classes and interfaces.
+
+syntax to use a package in class;
+package nameofthepackage;
+eg:
+package com.codegnan;
+
+
+packages helps us to avoid name conflicts
+
+A -- com.codegnan.myclasses;
+A - com.codegnan.hisclasses;
+
+Packages helps us to organize large projects
+Improves code readability
+Supports access protection
+
+
+Steps to create a package:
+1. Create a java program
+  -First line of the program should contain the package statement
+  -package name represents the directory structure
+  -the standard to name a package
+  -reverse of the domain name eg. cogegnan.com becomes com.codegnan
+  -package names must always be in the lower case letters
+
+2.Save the java file in your folder
+3.To compile the program use javac command with -d option
+  -d specifies the destination directory for compiled classes
+  -the compiler will automatically create a folder based on the package name
+  - . means the current directory
+4.To run the program:
+  -use fully qualifies name of the class,
+  -fully qualified name means : Package name - className
+   eg. packagename.subpackage.ClassNmae
+  - to run use java command with fully qualified name of the class
+   java packagename.classname;
+   eg. java com.codegnan.PackageDemo
+
+
+
+Git:
+----
+Git is a distributed version control system (DVCS)
+  -used to track changes in source code
+  -maintain the history of the project
+  -collaborate with other developers
+  --restore previous versions of code
+
+Local repository:
+  -A local repository is a git repository stored on your computer
+   It contains
+    -Project files
+    -commit history
+    -branches
+    - .git folder
+
+Using git:
+Setting up the identity, so that it appears on every commit:
+
+git config --global user.name "Ashwith"
+git config --global user.email "ashwithreddy01@gmail.com" 
+
+1. Create a local repository
+   -Inside your project folder give the command git init
+     eg: C:\jfs52> git inti
+   -A local repository is created
+
+2.Branch: Branch is a independent line of development of GIT
+  By default main branch is the primary branch of the repository
+   -It contains code
+
+we can check the branch using:
+git status
+
+Untracked files:
+When new files are created , Git does not track them automatically
+They are called untraced files.
+
+3.Move the files from working directory to staging area
+  Use:
+
+  To move prgm1.java from the working directory to staging area
+ 
+  git add prgm1.java
+
+  To move all java files:
+  git add *.java
+
+4.Commit: Commit is a snap shot of the project at a particular point of time
+  It records
+  -files added/modified
+  -author name
+  -time stamp 
+  Command to commit -m "Added Java Programs"
+
+5. To view commit history:
+
+git log
+
+commit 5e0892e816b553585d4fc664ba37b6a1f096e217 (HEAD -> master)
+Author: Ashwith <ashwithreddy01@gmail.com>
+Date:   Thu Mar 12 10:01:37 2026 +0530
+
+6. Remote repository:
+A remote repository is a repository which is stored on the online servers like GitHub, GitLab, bit bucket etc.
+Developers can share and collaborate on these online repositories.
+
+eg: https://github.com/AshwithReddy01/new.git
+
+Adding the remote repository
+
+git remote add origin https://github.com/AshwithReddy01/new.git
+
+7.Push
+git push
+This command sends commits from local repository to remote repository.
+git push -u origin main
+
+
+
+Arrays
+collection of similar elements
+homogeneous elements
+fixed length
+
+syntax:
+
+datatype[] arrayName = new datatype[size];
+int[] intArray = new int[3];
+String[] strArray = new String array[]
+
+
+Multi dimensional array
+10
+10 20 30
+44 55
+
+Jagged array:
+Multi dimensional array where each row can have different number of columns
+
+it is array of arrays
+memory is allocated separately for each rows
+useful for uneven data
+
+int MyArray[][] = new int [2][3]
+
+Jagged array:
+row 0 --> s1 24
+row 1 --> s2 40 50
+row 2 --> s3 50 76 89
+
+
+int jArray[][] = new int[3][]
+- 3 rows
+- columns are not defined
+
+Step 2: Declare number of rows and columns
+int MyArray[0] = new int[1] // row 1 has 1 column
+int MyArray[1] = new int[2] // row 2 has 2 column
+int MyArray[2] = new int[3] // row 3 has 3 column
+
+Step 3: Initialize elements in each row
+int MyArray[0][0] = 39;
+int MyArray[1][0] = 40;
+int MyArray[1][2] = 50;
+int MyArray[2][0] = 50;
+int MyArray[2][1] = 76;
+int MyArray[2][2] = 89;
+
+
+
+//Syntax to create an object
+//Classname objreference = new classname()
+student studentRef = new student();
+
+//Initializing student values - values to students
+studentRef.name = "Ashwith Reddy";
+studentRef.rollNo = 141;
+studentRef.age = 21;
+studentRef.course = "Full stack"; 
+
+//Printing all the values initialized
+System.out.println(studentRef.name);
+System.out.println(studentRef.rollNo);
+System.out.println(studentRef.age);
+System.out.println(studentRef.course);
+
+
+
+DISPLAY:
+
+ syntax to create a method:
+ accesmodifier returntype methodname(optional arguments){
+ accessmodifier:public,private,protected,default.
+public - available through out the application
+private - available only in the specified class
+ method body
+ } 
+ Example:
+
+   public void display(){
+    System.out.println(courseName);
+    System.out.println(courseId);
+    System.out.println(courseDuration);
+}
+
+Methods can be created in different ways:
+
+1. Methods without return type and without arguments
+2. Methods with return type and without arguments
+3. Methods without return type and with arguments
+4. Methods with return type and with arguments
+
+
+
+
+
+
+
+
+
+
+class diff methods how to call
+constructors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
